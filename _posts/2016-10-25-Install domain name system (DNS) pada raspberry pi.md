@@ -67,7 +67,7 @@ tambahkan konfigurasi dibawah ini pada `named.conf.local`
             };
 {% endhighlight %}
 
-lakukan penyalinan 'file forward' dan `file reverse` yang ada pada folder `/etc/bind/` dengan cara sebagai berikut:
+lakukan penyalinan `file forward` dan `file reverse` yang ada pada folder `/etc/bind/` dengan cara sebagai berikut:
 
 #### file forward
 {% highlight bash %}
