@@ -3,13 +3,14 @@ layout: post
 title: Installasi domain name system (DNS) pada raspberry pi
 description: "Domain name system (DNS) adalah sistem penamaan domain yang mentranslasikan domain ke IP address dan sebaliknya"
 tags: [linux, raspberry pi, DNS]
+modified: 2016-10-25
 ---
 
 ## Installasi dns pada raspberry pi
 
 ### Apa itu domain name system (DNS) ?
 
-[Domain Name System][] adalah sistem penamaan domain yang mentranslasikan domain ke IP address dan sebaliknya.
+Domain name system adalah sistem penamaan domain yang mentranslasikan domain ke IP address dan sebaliknya.
 
 ### Install paket yang diperlukan
  
