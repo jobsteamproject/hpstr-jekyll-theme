@@ -42,19 +42,19 @@ $ sudo ifconfig eth0 192.168.1.1/24 up
 
 ### Pemasangan DNS
 
-untuk melakukan pemasangan DNS, masuk ke dalam folder '/etc/bind/'
+untuk melakukan pemasangan DNS, masuk ke dalam folder `/etc/bind`
 
 {% highlight bash %}
 $ cd /etc/bind/
 {% endhighlight %}
 
-setelah itu lakukan pengeditan pada 'named.conf.local'
+setelah itu lakukan pengeditan pada `named.conf.local`
 
 {% highlight bash %}
 $ sudo nano named.conf.local
 {% endhighlight %}
 
-tambahkan konfigurasi dibawah ini pada 'named.conf.local'
+tambahkan konfigurasi dibawah ini pada `named.conf.local`
 
 {% highlight bash %}
     zone "jobsteamproject.com"{
@@ -67,7 +67,7 @@ tambahkan konfigurasi dibawah ini pada 'named.conf.local'
             };
 {% endhighlight %}
 
-lakukan penyalinan 'file forward' dan 'file reverse' yang ada pada folder '/etc/bind/' dengan cara sebagai berikut:
+lakukan penyalinan 'file forward' dan `file reverse` yang ada pada folder `/etc/bind/` dengan cara sebagai berikut:
 
 #### file forward
 {% highlight bash %}
@@ -79,7 +79,7 @@ $ sudo cp db.local db.jobsteamproject
 $ sudo cp db.127 db.192
 {% endhighlight %}
 
-selanjutnya edit file 'forward' 'db.jobsteamproject'
+selanjutnya edit file `forward` `db.jobsteamproject`
 
 {% highlight bash %}
 $ sudo nano db.jobsteamproject
@@ -103,7 +103,7 @@ www      IN     A       192.168.1.1
     
 {% endhighlight %}    
 
-selanjutnya edit file 'reverse' 'db.192'
+selanjutnya edit file `reverse` `db.192`
 
 {% highlight bash %}
 
@@ -120,7 +120,7 @@ $TTL                    604800
     
 {% endhighlight %}
 
-kemudian edit file 'resolv.conf'
+kemudian edit file `resolv.conf`
 
 {% highlight bash %}
 $ nano /etc/resolv.conf
@@ -133,13 +133,14 @@ search jobsteamproject.com
 nameserver 192.168.1.1
 {% endhighlight %}
 
-jika sudah konfigurasi semua, lakukan 'restart' pada bind9
+jika sudah konfigurasi semua, lakukan `restart` pada bind9
 
 {% highlight bash %}
 $ sudo /etc/init.d/bind9 restart
 {% endhighlight %}
 
-lakukan pengecekan DNS dengan 'nslookup'
+lakukan pengecekan DNS dengan `nslookup`
+
 {% highlight bash %}
 $ sudo nslookup jobsteamproject.com
 $ sudo nslookup 192.168.1.1
